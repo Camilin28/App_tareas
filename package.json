@@ -1,0 +1,24 @@
+{
+  "name": "app_tareas",
+  "version": "1.0.0",
+  "description": "Aplicación de gestión de tareas usando arquitectura hexagonal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Camilin28/App_tareas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Camilin28/App_tareas/issues"
+  },
+  "homepage": "https://github.com/Camilin28/App_tareas#readme",
+  "dependencies": {
+    "uuid": "^14.0.0"
+  }
+}
