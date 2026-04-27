@@ -1,10 +1,10 @@
 class ListarTareas {
-  constructor(tareaRepository) {
-    this.tareaRepository = tareaRepository;
+  constructor(repo) {
+    this.repo = repo;
   }
 
   ejecutar() {
-    return this.tareaRepository.listar();
+    return this.repo.listar();
   }
 }
 

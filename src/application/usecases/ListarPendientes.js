@@ -1,12 +1,10 @@
 class ListarPendientes {
-  constructor(tareaRepository) {
-    this.tareaRepository = tareaRepository;
+  constructor(repo) {
+    this.repo = repo;
   }
 
   ejecutar() {
-    return this.tareaRepository
-      .listar()
-      .filter(t => t.estaPendiente());
+    return this.repo.listar().filter(t => t.estaPendiente());
   }
 }
 

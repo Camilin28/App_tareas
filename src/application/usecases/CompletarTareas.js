@@ -1,16 +1,14 @@
 class CompletarTarea {
-  constructor(tareaRepository) {
-    this.tareaRepository = tareaRepository;
+  constructor(repo) {
+    this.repo = repo;
   }
 
   ejecutar(id) {
-    const tarea = this.tareaRepository.buscarPorId(id);
-    if (!tarea) {
-      throw new Error("Tarea no encontrada");
-    }
+    const tarea = this.repo.buscarPorId(id);
+    if (!tarea) throw new Error("Tarea no encontrada");
 
     tarea.completar();
-    this.tareaRepository.guardar(tarea);
+    this.repo.guardar(tarea);
     return tarea;
   }
 }

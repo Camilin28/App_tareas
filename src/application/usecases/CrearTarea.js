@@ -1,14 +1,14 @@
-const Tarea = require("../../domain/Tarea");
+const Tarea = require("../../domain/tarea");
 const { v4: uuidv4 } = require("uuid");
 
 class CrearTarea {
-  constructor(tareaRepository) {
-    this.tareaRepository = tareaRepository;
+  constructor(repo) {
+    this.repo = repo;
   }
 
   ejecutar(titulo) {
     const tarea = new Tarea(uuidv4(), titulo);
-    this.tareaRepository.guardar(tarea);
+    this.repo.guardar(tarea);
     return tarea;
   }
 }
