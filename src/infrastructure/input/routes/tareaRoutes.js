@@ -7,6 +7,6 @@ module.exports = (controller) => {
   router.get("/tareas", controller.listar);
   router.patch("/tareas/:id/completar", controller.completar);
   router.get("/tareas/pendientes", controller.pendientes);
-
+  router.delete("/tareas/:id", controller.eliminar);
   return router;
 };

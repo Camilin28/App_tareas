@@ -6,6 +6,7 @@ const Crear = require("./src/application/usecases/CrearTarea");
 const Listar = require("./src/application/usecases/ListarTareas");
 const Completar = require("./src/application/usecases/CompletarTarea");
 const Pendientes = require("./src/application/usecases/ListarPendientes");
+const Eliminar = require("./src/application/usecases/EliminarTarea");
 
 const Controller = require("./src/infrastructure/input/controllers/TareaController");
 const rutas = require("./src/infrastructure/input/routes/tareaRoutes");
@@ -19,7 +20,8 @@ const controller = new Controller(
   new Crear(repo),
   new Listar(repo),
   new Completar(repo),
-  new Pendientes(repo)
+  new Pendientes(repo),
+  new Eliminar(repo)
 );
 
 app.use("/api", rutas(controller));

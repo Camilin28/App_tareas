@@ -31,6 +31,14 @@ class TareaController {
   pendientes = (req, res) => {
     res.json(this.listarPendientes.ejecutar());
   };
+  eliminar = (req, res) => {
+  try {
+    this.eliminarTarea.ejecutar(req.params.id);
+    res.status(204).send();
+  } catch (e) {
+    res.status(404).json({ error: e.message });
+  }
+};
 }
 
 module.exports = TareaController;
